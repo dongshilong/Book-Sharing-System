@@ -1,11 +1,52 @@
-<div class="btns">
-
+<div class="span9">
+	<table class="table table-hover">
+		<%= render (@publications) %>
+	</table>
+	<div class="row-fluid">
+		<span class="span12" align="center">
+			<%= will_paginate @publications, :container => false, :renderer => BootstrapPagination::Rails %>
+		</span>
+	</div>
 </div>
-<table class="table table-hover">
-	<%= render (@publications) %>
-</table>
-<div class="row-fluid">
-	<span class="span12" align="center">
-		<%= will_paginate @publications, :container => false, :renderer => BootstrapPagination::Rails %>
-	</span>
+<div class="span3">
+  <div id="newest">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active">
+        <blockquote>
+          <a href="#"><span class="label label-info">最新分享</span></a>
+        </blockquote>
+      </li>
+      <li><a href="#">少有人走的路</a></li>
+      <li><a href="#">少有人走的路</a></li>
+      <li><a href="#">少有人走的路</a></li>
+      <li><a href="#">少有人走的路</a></li>
+    </ul>
+  </div>
+  <div id="hotest">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active">
+        <blockquote>
+          <a href="#"><span class="label label-info">最新分享</span></a>
+        </blockquote>
+      </li>
+      <li><a href="#">少有人走的路</a></li>
+      <li><a href="#">少有人走的路</a></li>
+      <li><a href="#">少有人走的路</a></li>
+      <li><a href="#">少有人走的路</a></li>
+    </ul>
+  </div>
+  <div id="users">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active">
+        <blockquote>
+          <a href="#"><span class="label label-info">最新分享</span></a>
+        </blockquote>
+      </li>
+      <li><a href="#">少有人走的路</a></li>
+      <li><a href="#">少有人走的路</a></li>
+      <li><a href="#">少有人走的路</a></li>
+      <li><a href="#">少有人走的路</a></li>
+    </ul>
+
+  </div>
 </div>

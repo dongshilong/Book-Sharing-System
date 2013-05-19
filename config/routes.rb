@@ -1,12 +1,16 @@
 # -*- encoding : utf-8 -*-
 Book::Application.routes.draw do
 
-resources :publications do
-        collection do
-                get 'search'
-        end
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"
+
+  resources :publications do
+    collection do
+      get 'search'
+    end
     
-end
+  end
 
   resources :orders
 
@@ -17,6 +21,8 @@ end
   resources :publications
 
   resources :users
+  
+  resources :sessions
   
   match "myAudit" => "orders#myAudit"
 

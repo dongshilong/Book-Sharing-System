@@ -1,0 +1,29 @@
+<%= form_tag sessions_path, :class => "form-horizontal" do %>
+<fieldset>
+	<legend>
+		登录
+		<%= link_to "没有帐号？注册", { :controller => "users", :action => "new" }, :class => "btn btn-link btn-large pull-right" %><i class='icon-arrow-right'></i>
+	</legend>
+	<div class="control-group">
+		<label class="control-label" for="email">邮箱</label>
+		<div class="controls">
+			<%= text_field_tag :email, params[:email] %>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="password">密码</label>
+		<div class="controls">
+			<%= password_field_tag :password, params[:password] %>
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="controls">
+			<%= check_box_tag :remember_me, 1, params[:remember_me] %>
+			<%= label_tag :remember_me %>
+		</div>
+	</div>
+	<div class="control-group">
+		<%= submit_tag '登录', :class => "btn btn-primary btn-large pull-right" %>
+	</div>
+</fieldset>
+<% end %>

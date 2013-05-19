@@ -60,6 +60,63 @@
 }
 
 
+/* register
+-------------------------------------------------------------- */
+.report {
+	position: relative;
+	margin-left: 80px;
+}
+
+.report img {
+	opacity: 0.2;
+	-webkit-filter: grayscale(100%); 
+	-moz-filter: grayscale(100%); 
+	-ms-filter: grayscale(100%); 
+	-o-filter: grayscale(100%); 
+	filter: grayscale(100%); 
+	filter: gray;
+}
+
+.report p {
+	position: absolute;
+}
+
+.report .cities {
+	left: 60px;
+	top: 60px;
+	font-size: 24px;
+}
+
+.report .circles {
+	left: 58px;
+	top: 130px;
+	font-size: 25px;
+}
+
+.report .users {
+	left: 56px;
+	top: 200px;
+	font-size: 26px;
+}
+
+.report .books {
+	left: 246px;
+	top: 60px;
+	font-size: 24px;
+}
+
+.report .orders {
+	left: 244px;
+	top: 130px;
+	font-size: 25px;
+}
+
+.report .saveMoney {
+	left: 242px;
+	top: 200px;
+	font-size: 26px;
+}
+
 /* Footer
 -------------------------------------------------------------- */
 #footer,.footer {

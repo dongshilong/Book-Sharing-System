@@ -1,6 +1,13 @@
-# -*- encoding : utf-8 -*-
 class User < ActiveRecord::Base
-  attr_accessible :email, :itcode, :name, :phone
+  authenticates_with_sorcery!
+  
+  attr_accessible :username, :email, :password, :password_confirmation
   
   has_many :publications, :class_name => "Publication", :foreign_key => "contributor"
+
+  validates_confirmation_of :password
+  validates_presence_of :password, :on => :create
+  validates_presence_of :username
+  validates_presence_of :email
+  validates_uniqueness_of :email
 end
