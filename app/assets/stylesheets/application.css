@@ -68,6 +68,8 @@
 }
 
 .report img {
+	width: 400px;
+	height: 280px;
 	opacity: 0.2;
 	-webkit-filter: grayscale(100%); 
 	-moz-filter: grayscale(100%); 
@@ -82,39 +84,39 @@
 }
 
 .report .cities {
-	left: 60px;
-	top: 60px;
-	font-size: 24px;
+	left: 65px;
+	top: 40px;
+	font-size: 14px;
 }
 
 .report .circles {
-	left: 58px;
-	top: 130px;
-	font-size: 25px;
+	left: 63px;
+	top: 100px;
+	font-size: 15px;
 }
 
 .report .users {
-	left: 56px;
-	top: 200px;
-	font-size: 26px;
+	left: 61px;
+	top: 160px;
+	font-size: 16px;
 }
 
 .report .books {
-	left: 246px;
-	top: 60px;
-	font-size: 24px;
+	left: 216px;
+	top: 40px;
+	font-size: 14px;
 }
 
 .report .orders {
-	left: 244px;
-	top: 130px;
-	font-size: 25px;
+	left: 214px;
+	top: 100px;
+	font-size: 15px;
 }
 
 .report .saveMoney {
-	left: 242px;
-	top: 200px;
-	font-size: 26px;
+	left: 212px;
+	top: 160px;
+	font-size: 16px;
 }
 
 /* Footer
