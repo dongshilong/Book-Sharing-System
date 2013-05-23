@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 Book::Application.routes.draw do
 
+  resources :circles
+
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"

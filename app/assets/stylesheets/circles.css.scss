@@ -1,0 +1,74 @@
+// Place all the styles related to the Circles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Circle
+-------------------------------------------------------------- */
+.circle-list {
+	overflow: hidden;
+	margin-top: -20px;
+	margin-left: 20px;
+	font-size: 0;
+	letter-spacing: -0.31em;
+	word-spacing: -0.43em;
+}
+
+.circle-list .circle-item {
+	display: inline-block;
+	zoom: 1;
+	width: 44.9%;
+	vertical-align: top;
+	padding-top: 0;
+	padding-right: 5%;
+	margin-bottom: 15px;
+	border-top: 1px dashed #ccc;
+	margin-top: -1px;
+	font-size: 12px;
+	letter-spacing: normal;
+	word-spacing: normal;
+}
+
+.circle-list .circle-item .pic {
+	float: left;
+	text-align: left;
+	margin-right: 20px;
+	padding-top: 20px;
+	width: 80px;
+	height: 80px;
+}
+
+.circle-list .circle-item .content {
+	padding-top: 16px;
+	border: 0;
+	overflow: hidden;
+}
+
+.circle-item .content .title {
+	margin-bottom: 3px;
+	color: #5d5d5d;
+}
+
+.circle-list .circle-item .content h3 {
+	width: auto;
+	margin: 0;
+	width: 85%;
+	height: auto;
+	margin: -4px 0 6px 0;
+	word-wrap: break-word;
+	background: transparent;
+	
+	font: 14px Arial,Helvetica,sans-serif;
+	color: #666;
+	margin-bottom: 1px;
+	line-height: 1.8;
+}
+
+.circle-list .circle-item .info {
+	margin-bottom: 4px;
+}
+
+.circle-list .circle-item p {
+	margin-bottom: 12px;
+	color: #666;
+	word-wrap: break-word;
+	word-break: break-all;
+}

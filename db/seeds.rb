@@ -8,9 +8,9 @@
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
 User.delete_all
-User.create :name => '韩寒', :email => 'admin@hanhan.com', :phone => '13300000001', :itcode => 'hanhan'
-User.create :name => '老罗', :email => 'laoluo@chuizi.com', :phone => '13300000002', :itcode => 'laoluo'
-User.create :name => '雷布斯', :email => 'leibusi@xiaomi.com', :phone => '13300000003', :itcode => 'leibusi'
+User.create :name => '韩寒', :email => 'admin@hanhan.com', :phone => '13300000001', :username => 'hanhan', :password => '000000'
+User.create :name => '老罗', :email => 'laoluo@chuizi.com', :phone => '13300000002', :username => 'laoluo', :password => '000000'
+User.create :name => '雷布斯', :email => 'leibusi@xiaomi.com', :phone => '13300000003', :username => 'leibusi', :password => '000000'
 
 Publication.delete_all
 (0..100).each do |i|
@@ -25,3 +25,12 @@ Publication.delete_all
   book.additional_attributes.create :name => "price", :value => "12.34"
   book.additional_attributes.create :name => "binding", :value => "平装"
 end
+
+Circle.delete_all
+(1..9).each do |i|
+  circle = Circle.create :name => "圈子#{i}", :introduction => "圈子#{i}是一个XXX圈子", :logo => "circle_log#{i}.png",
+  :owner => User.first
+end
+
+Circle.first.users << User.first
+Circle.first.users << User.last
