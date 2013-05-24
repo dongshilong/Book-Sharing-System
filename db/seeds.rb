@@ -8,9 +8,9 @@
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
 User.delete_all
-User.create :name => '韩寒', :email => 'admin@hanhan.com', :phone => '13300000001', :username => 'hanhan', :password => '000000'
-User.create :name => '老罗', :email => 'laoluo@chuizi.com', :phone => '13300000002', :username => 'laoluo', :password => '000000'
-User.create :name => '雷布斯', :email => 'leibusi@xiaomi.com', :phone => '13300000003', :username => 'leibusi', :password => '000000'
+User.create :screen_name => '韩寒', :email => 'admin@hanhan.com', :phone => '13300000001', :username => 'hanhan', :password => '000000000'
+User.create :screen_name => '老罗', :email => 'laoluo@chuizi.com', :phone => '13300000002', :username => 'laoluo', :password => '000000000'
+User.create :screen_name => '雷布斯', :email => 'leibusi@xiaomi.com', :phone => '13300000003', :username => 'leibusi', :password => '000000000  '
 
 Publication.delete_all
 (0..100).each do |i|

@@ -5,7 +5,4 @@ class CirclesUsers < ActiveRecord::Migration
       t.column :user_id, :integer
     end
   end
-
-  def down
-  end
 end

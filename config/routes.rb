@@ -1,12 +1,10 @@
 # -*- encoding : utf-8 -*-
 Book::Application.routes.draw do
 
+  devise_for :users
+
   resources :circles
-
-  get "logout" => "sessions#destroy", :as => "logout"
-  get "login" => "sessions#new", :as => "login"
-  get "signup" => "users#new", :as => "signup"
-
+  
   resources :publications do
     collection do
       get 'search'
@@ -21,11 +19,7 @@ Book::Application.routes.draw do
   resources :tags
 
   resources :publications
-
-  resources :users
-  
-  resources :sessions
-  
+    
   match "myAudit" => "orders#myAudit"
 
  

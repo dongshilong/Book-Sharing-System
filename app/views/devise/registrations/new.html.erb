@@ -1,0 +1,42 @@
+<div class="span6">
+	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class=>"form-horizontal well"}) do |f| %>
+	<fieldset>
+		<legend>
+			注册
+		</legend>
+		<div class="error_messages">
+			<ul>
+				<%= devise_error_messages! %>
+			</ul>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="username">用户名</label>
+			<div class="controls">
+				<%= f.text_field :username, :autofocus => true %>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="email">邮箱</label>
+			<div class="controls">
+				<%= f.text_field :email %>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="password">密码</label>
+			<div class="controls">
+				<%= f.password_field :password %>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="password">密码确认</label>
+			<div class="controls">
+				<%= f.password_field :password_confirmation %>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= f.submit '注册', :class => "btn btn-primary btn-large pull-right" %>
+		</div>
+	</fieldset>
+	<% end %>
+</div>
+<%= render "devise/shared/sign_in_or_sign_up_common" %>

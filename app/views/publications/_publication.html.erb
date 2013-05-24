@@ -21,12 +21,6 @@
 			<li>
 				<span>16261 人读过</span>
 			</li>
-			<li>
-				<span>贡献者：</span>
-				<% publication.publications.each do |publication| %>
-				<%= link_to publication.contributor.name, publication, :class => "label" %>
-				<% end %>
-			</li>
 		</ul>
 	</td>
 	<td style="vertical-align:middle">
