@@ -1,0 +1,3 @@
+$("#Circle<%= @circle.id %>").fadeOut(500, function() {
+	$(this).replaceWith("<%= escape_javascript(render(:partial => 'circle', :object => @circle)) %>");
+});

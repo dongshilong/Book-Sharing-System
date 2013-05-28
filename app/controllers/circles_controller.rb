@@ -1,4 +1,6 @@
-class CirclesController < ApplicationController
+class CirclesController < ApplicationController  
+  before_filter :authenticate_user!, :except => [:index, :show]
+  
   # GET /circles
   # GET /circles.json
   def index
@@ -78,6 +80,13 @@ class CirclesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to circles_url }
       format.json { head :no_content }
+    end
+  end
+  
+  def join
+    @circle = Circle.find(params[:id])    
+    unless @circle.users.include?(current_user)
+      @circle.users << current_user
     end
   end
 end

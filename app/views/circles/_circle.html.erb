@@ -1,0 +1,19 @@
+<div class="circle-item" id="Circle<%= circle.id %>">
+	<div class="pic">
+		<%= link_to(image_tag("circle/#{circle.logo}", :title => circle.name, :class => 'img-circle'), circle) %>
+	</div>
+	<div class="content">
+		<div class="title">
+			<h3><%= link_to circle.name, circle %></h3>
+		</div>
+		<div class="info"><%= circle.users.count %>&nbsp;位书友 </div>
+		<p><%= circle.introduction %></p>
+		<div class="join">
+			<% if user_signed_in? and circle.users.include?(current_user) %>
+				<span class='muted joined'><i class='icon icon-ok'></i>已加入</span>
+			<% else %>
+				<%= link_to '+加入圈子', join_url(circle.id), :class => 'btn btn-link', :remote => true %>
+			<% end %>
+		</div>
+	</div>
+</div>
